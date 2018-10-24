@@ -1,0 +1,38 @@
+{
+  "editor.letterSpacing": 1,
+  "editor.tabSize": 2,
+  "editor.autoIndent": true,
+  "editor.rulers": [90, 140],
+  "editor.codeLens": false,
+  "editor.renderWhitespace": "none",
+  "editor.fontSize": 14,
+  //"editor.fontFamily": "Inconsolata, Fira code",
+  "editor.wordWrap": "off",
+  "editor.minimap.enabled": false,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "editor.cursorBlinking": "solid",
+  "workbench.iconTheme": "material-icon-theme", //Following setting requires Material Icon Theme Extension
+  "git.enableSmartCommit": true,
+  "debug.openExplorerOnEnd": true,
+  "auto-close-tag.SublimeText3Mode": true, // Following setting requires Auto Close Tag Extension
+  "explorer.openEditors.visible": 0,
+  "html.autoClosingTags": false,
+  "git.confirmSync": false,
+  "prettier.printWidth": 100, // Following setting requires Prettier Extension
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "typescriptHero.imports.insertSemicolons": true, // Following setting requires TypeScriptHero Extension
+  "typescriptHero.imports.multiLineWrapThreshold": 90,
+  "editor.codeActionsOnSave": {
+    "source.organizeImport": true
+  },
+  "npm.enableScriptExplorer": true,
+  "files.associations": {
+    "*.json": "jsonc"
+  }
+}
