@@ -20,6 +20,9 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
+    angularCli: {
+      environment: 'dev',
+    },
     reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
@@ -46,6 +49,10 @@ module.exports = function (config) {
         ]
       }
     },
-    singleRun: false
+    singleRun: false,
+    captureTimeout: 210000,
+    browserDisconnectTolerance: 3,
+    browserDisconnectTimeout: 210000,
+    browserNoActivityTimeout: 210000,
   });
 };
