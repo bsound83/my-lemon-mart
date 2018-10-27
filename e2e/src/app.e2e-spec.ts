@@ -7,8 +7,8 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display "LemonMart" at App Title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Hello, Lemonite!');
+    expect(page.getParagraphText()).toEqual('LemonMart');
   });
 });

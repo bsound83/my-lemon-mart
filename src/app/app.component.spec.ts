@@ -6,11 +6,17 @@ import {
   ObservableMediaFake,
 } from './common/common.testing';
 import { ObservableMedia } from '@angular/flex-layout';
-// import { MatIconRegistry } from '@angular/material';
+import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { AuthService } from './auth/auth.service';
+import { AuthServiceFake } from './auth/auth.service.fake';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,10 +24,10 @@ describe('AppComponent', () => {
       imports: commonTestingModules,
       providers: commonTestingProviders.concat([
         { provide: ObservableMedia, useClass: ObservableMediaFake },
-        // { provide: MatIconRegistry, useClass: MatIconRegistryFake },
+        { provide: MatIconRegistry, useClass: MatIconRegistryFake },
         { provide: DomSanitizer, useClass: DomSanitizerFake },
       ]),
-      declarations: [AppComponent],
+      declarations: [AppComponent, NavigationMenuComponent],
     }).compileComponents();
   }));
 

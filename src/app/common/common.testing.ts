@@ -8,13 +8,12 @@ import { SecurityContext } from '@angular/platform-browser/src/security/dom_sani
 import { RouterTestingModule } from '@angular/router/testing';
 import { Observable, Subscription, of } from 'rxjs';
 import { MaterialModule } from '../material.module';
-// import { AuthService } from '../auth/auth.service';
-// import { AuthServiceFake } from '../auth/auth.service.fake';
-// import { MaterialModule } from '../material.module';
-// import { SharedComponentsModule } from '../shared-components.module';
+import { AuthService } from '../auth/auth.service';
+import { UiService } from './ui.service';
+import { AuthServiceFake } from '../auth/auth.service.fake';
+import { SharedComponentsModule } from '../shared-components.module';
 // import { UserService } from '../user/user/user.service';
 // import { UserServiceFake } from '../user/user/user.service.fake';
-// import { UiService } from './ui.service';
 
 const FAKE_SVGS = {
   lemon: '<svg><path id="lemon" name="lemon"></path></svg>',
@@ -72,9 +71,9 @@ export class DomSanitizerFake {
 }
 
 export const commonTestingProviders: any[] = [
-  // { provide: AuthService, useClass: AuthServiceFake },
+  { provide: AuthService, useClass: AuthServiceFake },
   // { provide: UserService, useClass: UserServiceFake },
-  // UiService,
+  UiService,
 ];
 
 export const commonTestingModules: any[] = [
@@ -84,5 +83,5 @@ export const commonTestingModules: any[] = [
   NoopAnimationsModule,
   HttpClientTestingModule,
   RouterTestingModule,
-  // SharedComponentsModule,
+  SharedComponentsModule,
 ];

@@ -1,17 +1,8 @@
-import {
-  commonTestingModules,
-  commonTestingProviders,
-  MatIconRegistryFake,
-  DomSanitizerFake,
-  ObservableMediaFake,
-} from '../common/common.testing';
-import { ObservableMedia } from '@angular/flex-layout';
-import { MatIconRegistry } from '@angular/material';
-import { DomSanitizer } from '@angular/platform-browser';
-
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InventoryComponent } from './inventory.component';
+
+import { commonTestingModules, commonTestingProviders } from '../common/common.testing';
 
 describe('InventoryComponent', () => {
   let component: InventoryComponent;
@@ -20,11 +11,7 @@ describe('InventoryComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: commonTestingModules,
-      providers: commonTestingProviders.concat([
-        { provide: ObservableMedia, useClass: ObservableMediaFake },
-        { provide: MatIconRegistry, useClass: MatIconRegistryFake },
-        { provide: DomSanitizer, useClass: DomSanitizerFake },
-      ]),
+      providers: commonTestingProviders,
       declarations: [InventoryComponent],
     }).compileComponents();
   }));
